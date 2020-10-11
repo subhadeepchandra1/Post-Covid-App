@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import axios from 'axios';
 
 function Copyright() {
   return (
@@ -49,6 +50,27 @@ const useStyles = makeStyles((theme) => ({
 export default function LoginForm() {
   const classes = useStyles();
 
+  const [pass, setPass] = React.useState('');
+  const [username, setUsername] = React.useState('');
+
+  const changePass = (event) => {
+    setPass(event.target.value);
+  };
+
+  const changeUsername = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const login = (e) => {
+    e.preventDefault();
+    axios.post('https://post-covid-api.herokuapp.com/rest-auth/login/',
+    {
+        "username": username,
+        "password": pass,
+        "email": ""
+    }).then( res => console.log(res));
+  };
+
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -59,12 +81,14 @@ export default function LoginForm() {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        <form onSubmit={login} className={classes.form} noValidate>
           <TextField
             variant="outlined"
             margin="normal"
             required
             fullWidth
+            onChange={changeUsername}
+            value={username}
             id="email"
             label="Email Address"
             name="email"
@@ -76,6 +100,8 @@ export default function LoginForm() {
             margin="normal"
             required
             fullWidth
+            onChange={changePass}
+            value={pass}
             name="password"
             label="Password"
             type="password"

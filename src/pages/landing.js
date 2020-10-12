@@ -15,14 +15,21 @@ export default function landing() {
                     <Typography variant="h6">
                         Post Covid
                     </Typography>
-                    <Button color="inherit" href="/login">Login</Button>
-                    <Button color="inherit" href="/signup">Sign Up</Button>
+                    <Button startIcon={<VpnKeySharpIcon/>} color="inherit" href="/login">Login</Button>
+                    <Button startIcon={<VpnKeySharpIcon/>} color="inherit" href="/signup">Sign Up</Button>
                 </Toolbar>
             </AppBar>
             <Container>
-                <h1>Hello</h1>
-                <Button startIcon={<VpnKeySharpIcon/>} variant="contained" href="/login">Login</Button> | 
-                <Button endIcon={<VpnKeySharpIcon/>} href="/signup">Signup</Button>
+                <h1><br></br></h1>
+                <Typography color="textPrimary" variant="h2" align="center">
+                    Welcome to Post Covid
+                </Typography>
+                <br></br>
+                <Typography color="textPrimary" variant="h5" align="center">
+                    Welcome to Post Covid
+                    Welcome to Post Covid
+                    Welcome to Post Covid
+                </Typography>
             </Container>
         </div>
     )

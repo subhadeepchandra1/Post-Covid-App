@@ -1,6 +1,9 @@
 ## Deployment
 https://thirsty-davinci-25b0ce.netlify.app/
 
+## _redirects
+/* /index.html 200
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

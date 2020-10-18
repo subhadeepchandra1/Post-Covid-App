@@ -14,6 +14,7 @@ https://thirsty-davinci-25b0ce.netlify.app/
 ## Reference sites
 https://medium.com/better-programming/building-basic-react-authentication-e20a574d5e71
 
+https://medium.com/@dakota.lillie/django-react-jwt-authentication-5015ee00ef9a
 
 ## Learn More
 
